@@ -1,0 +1,111 @@
+:root {
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	--dark-gray: hsl(0, 0%, 59%);
+	--primary-font: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: var(--primary-font);
+	font-size: 18px;
+	background-color: var(--dark-cyan);
+	background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+	background-size: auto, auto;
+	background-repeat: no-repeat, no-repeat;
+	background-attachment: fixed, fixed;
+	background-position: calc(50% + -27rem) calc(50% + -27rem), calc(50% - -28rem) calc(50% - -32.6rem);
+}
+
+.card {
+	margin: 11rem 1.6rem 3rem 1.6rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-color: white;
+	max-width: 400px;
+}
+
+.card-bg {
+	border-radius: 10px 10px 0 0;
+	height: 10rem;
+	width: 100%;
+}
+
+.profile-img {
+	border-radius: 100%;
+	height: auto;
+	width: 7.8rem;
+	border: 5px solid white;
+	position: absolute;
+	top: 6.4rem;
+}
+
+.personal-info {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 0.8rem;
+	width: 100%;
+	padding-top: 5.4rem;
+
+	h1 {
+		font-size: 1.4rem;
+	}
+
+	h2 {
+		font-size: 1.4rem;
+		font-weight: 400;
+		color: var(--dark-grayish-blue);
+	}
+}
+
+.country {
+	font-weight: 300;
+	padding-top: 0.6rem;
+	font-size: 1rem;
+	padding-bottom: 1.4rem;
+}
+
+.info-numbers {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 1px solid hsla(0, 0%, 59%, 0.2);
+	padding: 2rem;
+}
+
+.numbers-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		font-size: 0.8rem;
+		font-weight: 300;
+		letter-spacing: 0.1rem;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.card {
+		margin: 10rem auto;
+	}
+}
